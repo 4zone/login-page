@@ -7,10 +7,11 @@ import { CursosComponent } from './cursos/cursos.component';
 import { PaginaprincipalComponent } from './paginaprincipal/paginaprincipal.component';
 import { MisCursos } from './miscursos/MisCursos';
 import { AreapersonalComponent } from './areapersonal/areapersonal.component';
+import { DetailsComponent } from './details/details.component';
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet,  RouterModule, CommonModule, FormsModule, CursosComponent, PaginaprincipalComponent, MisCursos, AreapersonalComponent],
+    imports: [RouterOutlet,  RouterModule, CommonModule, FormsModule, CursosComponent, PaginaprincipalComponent, MisCursos, AreapersonalComponent, DetailsComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
   })
