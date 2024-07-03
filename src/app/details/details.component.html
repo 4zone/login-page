@@ -1,0 +1,25 @@
+<article>
+    <img class="listing-photo" [src]="cursoLocation?.imagen"
+      alt="Exterior photo of {{cursoLocation?.nombre}}"/>
+    <section class="listing-description">
+      <h2 class="listing-heading">{{cursoLocation?.nombre}}</h2>
+    </section>
+    <section class="listing-features">
+      <h2 class="section-heading">About this housing location</h2>
+      <ul>
+        <li>Does this location have laundry: </li>
+      </ul>
+    </section>
+    <section class="listing-apply">
+      <h2 class="section-heading">Apply now to live here</h2>
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" formControlName="firstName">
+
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" formControlName="lastName">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+        <button type="submit" class="primary">Apply now</button>
+    </section>
+  </article>

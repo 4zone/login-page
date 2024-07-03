@@ -1,0 +1,11 @@
+
+#saludar {
+    font-weight: bold;
+    max-width: 1000px;
+    margin-top: 5vh;
+    margin-left: 25vh;
+}
+h2, h6{
+    font-weight: bold;
+}
+

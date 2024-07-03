@@ -1,0 +1,16 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4" >
+    <div class="col mt-3" *ngFor="let curso of filteredCourses">
+      <div class="card h-100">
+        <div style="overflow: hidden; height: 150px;"> <!-- Establece una altura fija para la imagen -->
+          <img class="card-img-top w-100" [src]="curso.imagen" alt="{{ curso.nombre }}">
+        </div>
+        <div class="card-body">
+          <a id="underline" [routerLink] = "['/details', curso.id]">{{curso.nombre}}</a>
+          
+          <p class="card-text">{{ curso.descripcion }}</p>
+          <hr>
+          <small class="text-muted">0% completado</small>
+        </div>
+      </div>
+    </div>
+  </div>

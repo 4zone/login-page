@@ -1,0 +1,29 @@
+
+.container {
+    font-weight: bold;
+    margin-top: 5vh;
+    margin-left: 25vh;
+    max-width: 800px; 
+    background-color: white;
+    height: auto;
+    
+}
+small {
+    padding-left: 45px;
+}
+a{
+    text-decoration: none;
+    padding-left: 20px;
+   
+}
+section {
+
+margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 20px;
+}
+
+h2, h6{
+    font-weight: bold;
+}
