@@ -14,6 +14,22 @@ import { CommonModule } from '@angular/common';
   styleUrl: './details.component.css'
 })
 export class DetailsComponent {
+  @Input() cursoId?: number | undefined; // Input para recibir el ID del curso desde el componente padre
+  curso?: CursosInterfaz | undefined; // Objeto para almacenar los detalles del curso
 
-  
+  constructor(
+    private route: ActivatedRoute,
+    private cursosService: CursosService
+  ) {}
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      const idString = params.get('id'); // Obtener el ID del curso como string desde los parámetros de la ruta
+      if (idString) {
+        this.cursoId = +idString; // Convertir el string a número
+        this.curso = this.cursosService.getCoursesById(this.cursoId); // Obtener el curso del servicio por ID
+      }
+    });
+  }
+
 }

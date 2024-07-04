@@ -4,5 +4,6 @@ export interface CursosInterfaz {
     descripcion: string;
     imagen: string;
     status: string;
+    completado: number;
     
 }

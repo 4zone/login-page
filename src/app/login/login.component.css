@@ -14,7 +14,7 @@ body, html {
     align-items: center;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     max-width: 500px; /* Limitar el tamaño máximo */
     background-color: white;
     height: auto; /* Ajustar altura automáticamente */
@@ -22,8 +22,7 @@ body, html {
 
 /* Image Styles */
 #image {
-    width: 100%;
-    max-width: 230px;
+    max-width: 200px;
     height: auto;
 }
 
@@ -53,7 +52,7 @@ form {
 /* Button Styles */
 .btn {
     padding: 10px 20px;
-    width: 80%;
+    width: 40%;
     max-width: 300px;
 }
 

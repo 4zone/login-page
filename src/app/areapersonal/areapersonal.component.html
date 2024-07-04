@@ -1,0 +1,22 @@
+<section *ngIf="isAuth">
+
+    <div id="a" >
+      <h2>Área personal:</h2>
+
+      <mat-calendar [selected]="selectedDate" (selectedChange)="dateSelected($event)"></mat-calendar>
+    </div>
+  
+    <div class="eventos-container">
+      <h3>Eventos</h3>
+      <div *ngIf="eventos.length === 0" class="sin-eventos">No hay eventos para mostrar.</div>
+      <div *ngFor="let evento of eventos" class="evento-card">
+        <div><strong>Fecha:</strong> {{ evento.fecha | date }}</div>
+        <div><strong>Título:</strong> {{ evento.titulo }}</div>
+        <div *ngIf="evento.descripcion"><strong>Descripción:</strong> {{ evento.descripcion }}</div>
+      </div>
+      <button class="btn" mat-raised-button color="primary" (click)="agregarEvento()">Agregar Evento</button>
+
+    </div>
+  
+  </section>
+  

@@ -18,7 +18,7 @@ export class MisCursos implements OnInit {
   username: string | null = null;
   filteredCourses: CursosInterfaz[] = [];
   selectedEstado = 'todos';
-
+  state: number = 0;
   constructor(private cursosService: CursosService) {}
 
   ngOnInit() {

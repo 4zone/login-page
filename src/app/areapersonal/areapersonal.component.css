@@ -1,0 +1,30 @@
+/* Reducir el tamaño del calendario */
+.mat-calendar-content {
+  font-size: 14px; /* Ajusta el tamaño del texto dentro del calendario */
+  max-width: 300px; /* Establece el ancho máximo del calendario */
+  box-shadow: none; /* Elimina la sombra si no es necesaria */
+}
+
+/* Estilo para los días en el calendario */
+.mat-calendar-body-cell-content {
+  padding: 4px; /* Ajusta el espacio interno de cada día */
+}
+
+/* Estilo para el encabezado del calendario */
+.mat-calendar-header {
+  padding: 8px; /* Ajusta el espacio interno del encabezado */
+}
+
+#a{max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.eventos-container{
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
