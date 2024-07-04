@@ -1,10 +1,9 @@
-
 <section *ngIf="isAuth" id="saludar" class="container">
   <div class="row">
     <h2>¡Hola, {{username}}! 👋</h2>
     <h6>Vista general de curso</h6>
     <hr>
-    <div class="col-2">
+    <div class="col-3">
       <div>
         <select id="estado" class="form-control" name="estado" [(ngModel)]="selectedEstado">
           <option value="todos">Todos</option>
@@ -17,37 +16,13 @@
         </select>
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-9">
       <div>
         <input type="text" class="form-control" (keyup)="filterResults(searchInput.value)" placeholder="Buscar" name="search"  #searchInput/>
       </div>
     </div>
-    <div class="col-3">
-      <div>
-        <select id="estado" class="form-control" name="estado">
-          <option value="todos">Todos</option>
-          <option value="enprogreso">En progreso</option>
-          <option value="futuros">Futuros</option>
-          <option value="pasados">Pasados</option>
-          <option value="destacados">Destacados</option>
-          <option value="eliminado">Eliminado de la vista</option>
-        </select>
-      </div>
     </div>
-    <div class="col-3">
-      <div>
-        <select id="estado" class="form-control" name="estado">
-          <option value="todos">Todos</option>
-          <option value="enprogreso">En progreso</option>
-          <option value="futuros">Futuros</option>
-          <option value="pasados">Pasados</option>
-          <option value="destacados">Destacados</option>
-          <option value="eliminado">Eliminado de la vista</option>
-        </select>
-      </div>
+    <div>
+      <app-cursos [filteredCourses]="filteredCourses"></app-cursos>
     </div>
-  </div>
-  <div>
-    <app-cursos [filteredCourses]="filteredCourses"></app-cursos>
-  </div>
 </section>

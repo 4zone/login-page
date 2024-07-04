@@ -1,1 +1,15 @@
-<p>home works!</p>
+<body>
+    @if(pokemonResults$ | async; as resultObj){
+        <h1>Pokemon list:</h1>
+        <ul class="pokemon-list">
+            @for(item of resultObj.results; track item.name){
+                <li>{{item.name}}</li>
+            }
+        </ul>
+    }
+
+    @if(errorMessage ){
+        <h1>{{errorMessage}}</h1>
+    }
+
+</body>

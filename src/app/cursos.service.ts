@@ -65,8 +65,6 @@ export class CursosService {
 
   }
 
- 
-
   filterCourses(searchValue: string, status: string) {
     return this.cursos.filter(cursos => {
       const matchesStatus = status === 'todos' || cursos.status === status;
