@@ -7,13 +7,13 @@ import { PaginaprincipalComponent } from '../paginaprincipal/paginaprincipal.com
 import { MisCursos } from '../miscursos/MisCursos';
 import { AreapersonalComponent } from '../areapersonal/areapersonal.component';
 import { DetailsComponent } from '../details/details.component';
-import { Router } from '@angular/router';
-import routeConfig from '../../../routes';
+
 import { RouterModule } from '@angular/router';
+import { WeatherComponent } from '../weather/weather.component';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, CommonModule, FormsModule, RouterModule, CursosComponent, PaginaprincipalComponent, MisCursos, AreapersonalComponent, DetailsComponent, NavbarComponent],
+  imports: [RouterModule, CommonModule, FormsModule, RouterModule, CursosComponent, PaginaprincipalComponent, MisCursos, AreapersonalComponent, DetailsComponent, NavbarComponent, WeatherComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

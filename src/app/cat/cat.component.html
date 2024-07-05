@@ -1,0 +1,13 @@
+<div>
+    <input type="number" [(ngModel)]="statusCode" placeholder="Enter status code" />
+    <button (click)="fetchCatImage()">Fetch Cat Image</button>
+  </div>
+  <div>
+    <button (click)="fetchCatImageWithStatusCode(200)">200</button>
+    <button (click)="fetchCatImageWithStatusCode(404)">404</button>
+    <button (click)="fetchCatImageWithStatusCode(500)">500</button>
+    <!-- Puedes añadir más botones según necesites -->
+  </div>
+  <div *ngIf="catImage">
+    <img [src]="catImage" alt="HTTP Cat Image" />
+  </div>

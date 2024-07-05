@@ -5,8 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router'; 
 import { CommonModule } from '@angular/common';
 import { UsersService } from '../users.service';
-import { HttpErrorResponse } from '@angular/common/http';
-import { throwError } from 'rxjs';
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -33,15 +32,12 @@ constructor(private router: Router, private userService: UsersService) { }
     }
 }
 isLoggedIn() {
-
   return sessionStorage.getItem('username') !== null;
-
 }
 reload(){
-   window.location.reload();
+  window.location.reload();
 }
 //////////////////////////
-
 
   login(){
     const user = {email: this.email, password: this.password};

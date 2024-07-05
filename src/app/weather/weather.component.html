@@ -1,0 +1,27 @@
+    <div class="container">
+      <h4>Búsqueda por <strong>CIUDAD:</strong></h4>
+      <input type="text" (keyup.enter)="addWeather()" class="form-control" style="margin-bottom: 20px;" [(ngModel)]="city" (keyup.enter)="getWeather()">  
+          
+      <div class="card text-center">
+        <div class="container mt-5">
+            <div class="card-header">
+              <h2>Clima en {{ city }}</h2>
+            </div>
+            <div class="card-body" *ngIf="weatherData">
+              <h5 class="card-title">Temperatura: {{ (weatherData.main.temp - 273.15).toFixed(2) }} °C</h5>
+              <p class="card-text">Descripción: {{ weatherData.weather[0].description }}</p>
+              <p class="card-text">Humedad: {{ weatherData.main.humidity }}%</p>
+              <p class="card-text">Viento: {{ weatherData.wind.speed }} m/s</p>
+            </div>
+            <div class="card-footer text-muted" *ngIf="!weatherData">
+              <p>Cargando datos del clima...</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  
+    <h3>ÚLTIMAS BUSQUEDAS:</h3>
+    <ul>
+      <li *ngFor="let item of wList; trackBy: trackByFn">{{ item }}</li>
+    </ul>
+  

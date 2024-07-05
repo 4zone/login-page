@@ -8,6 +8,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { CookieService } from "ngx-cookie-service";
 import { provideHttpClient } from '@angular/common/http';
 import { ErrorHandler } from '@angular/core';
+import {TranslateLoader} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routeConfig),
@@ -18,6 +20,6 @@ bootstrapApplication(AppComponent, {
     HttpClient,
     provideHttpClient(),
     CookieService,
-    ErrorHandler
+    ErrorHandler,
   ]
 }).catch((err) => console.error(err));
