@@ -1,7 +1,14 @@
-    <div class="container">
-      <h4>Búsqueda por <strong>CIUDAD:</strong></h4>
+<h4>Búsqueda por <strong>CIUDAD:</strong></h4>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10">
       <input type="text" (keyup.enter)="addWeather()" class="form-control" style="margin-bottom: 20px;" [(ngModel)]="city" (keyup.enter)="getWeather()">  
-          
+    </div>
+    
+    <div class="col-lg-1">     
+<button class="btn btn-danger" (click)="deleteSearch()">X</button>
+    </div>
+    </div>          
       <div class="card text-center">
         <div class="container mt-5">
             <div class="card-header">
@@ -20,8 +27,30 @@
       </div>
     </div>
   
-    <h3>ÚLTIMAS BUSQUEDAS:</h3>
+    <section class="container">
+      <div *ngIf="wList.length !== 0">
+        <div class="row">
+          <h3>Búsquedas reci.</h3>
+          <div class="col-lg-12">
+          <ul>
+            <li *ngFor="let item of wList; trackBy: trackByFn" (click)="clickItem(item)">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+        </div>  
+      </div>
+  </section>
+
+    
+  <section *ngIf="wListDeletedItems.length !== 0">
+      <h3>PAPELERA:</h3>
     <ul>
-      <li *ngFor="let item of wList; trackBy: trackByFn">{{ item }}</li>
+      <li *ngFor="let item of wListDeletedItems; trackBy: trackByFn">{{item}}</li>
+      <label class="form-label">
+        ¿Qué ciudad desea recuperar?
+      </label>
+      <input type="text" [(ngModel)] = "cityTemp" class="form-control" (keyup.enter)="getPossibleWords()" (keyup.enter)="returnDeleted()" name="cityTemp"/>
+      <p *ngFor="let itemLi of listWords; trackBy trackByFn" id="listWords"  (click)="autoComplete(itemLi)">Quisiste decir? [ {{itemLi}} ]</p>
     </ul>
-  
+   </section>

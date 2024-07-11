@@ -27,16 +27,16 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="nav-link" [routerLink]="['/PokeList']" href="#">POKELIST</a></li>
                 <li><a class="nav-link" [routerLink]="['/weather']" href="#">Weather</a></li>
+                <li><a class="nav-link" [routerLink]="['/linkedin']" href="#">LinkedIn</a></li>
                 <li><a class="nav-link" [routerLink]="['/cat']" href="#">Cats</a></li>
+                <li><a class="nav-link" [routerLink]="['/juegos']" href="#">Juegos</a></li>
               </ul>
             </li>
-           
+          
             <li class="nav-item" *ngIf="!isAuth">
               <a class="nav-link" [routerLink]="['/login']">Login</a>
             </li>
-            <li class="nav-item" *ngIf="isAuth">
-              <a class="nav-link" href="#">Bienvenido, <strong>{{ username }}</strong></a>
-            </li>
+           
             <li class="nav-item" *ngIf="isAuth">
               <a class="nav-link" href="#" (click)="logOut()">Logout</a>
             </li>

@@ -1,14 +1,16 @@
 /* Global Styles */
+
 body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 /* Container Styles */
 .container {
-    margin-top: 12vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    margin-top: 16vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,8 +54,7 @@ form {
 /* Button Styles */
 .btn {
     padding: 10px 20px;
-    width: 40%;
-    max-width: 300px;
+    width: 80%;
 }
 
 /* Media Queries */
@@ -82,3 +83,31 @@ form {
     }
 }
 
+#isCorrect {
+    margin-top: 1rem;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 0 solid transparent;
+    border-radius: .5rem;
+}
+#username, #password {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: 1px solid black;
+    border-radius: .6rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: calc(1.5em + 1rem + 2px);
+    padding: .5rem 1rem;
+    font-size: 1.171875rem;
+    line-height: 1.5;   
+}
+.btn-primary {
+    color: #fff;
+    background-color: #0f6cbf;
+    border-color: #0f6cbf;
+    padding: .5rem 1rem;
+    font-size: 1.171875rem;
+    line-height: 1.5;
+    border-radius: .6rem;
+}

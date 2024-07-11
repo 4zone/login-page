@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
 import { PokemonResults } from '../../pokemon';
 
-const API_URL = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0';
+const API_URL = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0';
 
 @Injectable({
   providedIn: 'root'

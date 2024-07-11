@@ -21,21 +21,29 @@ constructor(private router: Router, private userService: UsersService) { }
   email: string = '';
   password: string = '';
   loginService: LoginServiceService = inject(LoginServiceService);
+  isCorrect = true;
 
-  onSubmit(){
-    const isAuthenticated = this.loginService.authenticate(this.username, this.password);
-    if(!isAuthenticated){
-      return false;
-    } else {
-      this.router.navigate(['']);
-      return true;
-    }
+    onSubmit() {
+      this.isCorrect = this.loginService.authenticate(this.username, this.password);
+      if (!this.isCorrect) {
+        return false;
+      } else {
+        this.router.navigate(['']);
+        return true;
+      }
 }
 isLoggedIn() {
   return sessionStorage.getItem('username') !== null;
 }
 reload(){
-  window.location.reload();
+}
+correctAuth(username: string, password:string){
+  if (this.username === 'admin' && this.password === 'admin') {
+    this.isCorrect = true;
+  } else {
+    this.isCorrect = false;
+  }
+
 }
 //////////////////////////
 

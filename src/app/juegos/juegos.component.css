@@ -1,0 +1,58 @@
+/* Gloria Font */
+
+h1 {
+    text-align: center;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#game-container {
+    width: 75px;
+    height: 75px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 75px 75 px 75px;
+    font-weight: bold;
+    font-size: 40px;
+    box-shadow: 5px 5px 5px black;
+    background-color: aquamarine;
+    }
+
+
+
+
+
+
+
+
+
+/*  Button Styles */
+.input {
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.input:focus {
+    outline: none;
+}
+.wave {
+    border-radius: 40px 0 40px 0;
+    transition: 0.3s ease;
+}
+.waveE {
+    background-color: rgb(255, 229, 189);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(250, 187, 69);
+    box-shadow: 2px 2px 2px 1px rgba(114, 84, 0, 0.4);
+}
+
+.waveE:focus {
+    border: 3px solid rgb(255, 213, 178);
+    box-shadow: 12px 12px 2px 1px rgba(114, 84, 0, 0.4);
+}

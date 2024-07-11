@@ -1,0 +1,19 @@
+<div>
+    <form (ngSubmit)="onSubmit()" >
+        <div class="container">
+            <input type="text" class="form-control" (keyup.enter)="onSubmit()" [(ngModel)]="username" placeholder="username" name="username">
+        </div>
+    </form>
+</div>
+<div *ngIf="responseData">
+    <h2>Perfil de LinkedIn - {{ responseData.firstName }} {{ responseData.lastName }}</h2>
+    <img [src]="responseData.profilePicture" alt="Foto de perfil" width="100px">
+    <p><strong>Headline:</strong> {{ responseData.headline }}</p>
+    <p><strong>Resumen:</strong> {{ responseData.summary }}</p>
+    <p><strong>¿Abierto a trabajar?:</strong> {{ responseData.isOpenToWork ? 'Sí' : 'No' }}</p>
+    <p><strong>¿Contratando?:</strong> {{ responseData.isHiring ? 'Sí' : 'No' }}</p>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    <p>Error al obtener datos: {{ errorMessage }}</p>
+  </div>
+  

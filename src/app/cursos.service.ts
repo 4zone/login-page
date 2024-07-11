@@ -18,6 +18,7 @@ export class CursosService {
       imagen: 'https://media.licdn.com/dms/image/C560BAQFYMRvAvtnz2A/company-logo_200_200/0/1631381586551?e=2147483647&v=beta&t=YBQmNF_lEthG-YDnJA2fv8OW0ohf1ilBox2zlrn9VWY',
       status: 'completo',
       completado: 100,
+      video: 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ'
     },
     {
       id: 1,
@@ -26,6 +27,7 @@ export class CursosService {
       imagen: 'https://www.systemzaragoza.com/wp-content/uploads/formacion.png',
       status: 'enprogreso',
       completado: 20,
+      video: 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ'
 
     },
     {
@@ -35,6 +37,7 @@ export class CursosService {
       imagen: 'https://www.gipuzkoa.eus/documents/2937282/0/gfa_urdina.png/c8954b4e-955d-362c-beeb-fb155877bf6c?t=1715245783520',
       status: 'enprogreso',
       completado: 38,
+      video: 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ'
 
     },
     {
@@ -44,6 +47,8 @@ export class CursosService {
       imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
       status: 'completo',
       completado: 100,
+      video: 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ'
+
 }
     ,
     {
@@ -53,6 +58,7 @@ export class CursosService {
       imagen: 'https://pbs.twimg.com/profile_images/1519236507298680832/lPYM-SXN_400x400.jpg',
       status: 'todos',
       completado: 12,
+      video: 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ'
 
     }
   ]

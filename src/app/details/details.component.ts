@@ -2,18 +2,22 @@ import { Component, Input, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CursosService } from '../cursos.service';
 import { CursosInterfaz } from '../cursos-interfaz';
-import { FormControl, FormGroup } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, CommonModule, ],
+  imports: [ReactiveFormsModule, FormsModule, CommonModule, CdkAccordionModule],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
 export class DetailsComponent {
+  items = ['La solución SENDAudit'];
+  expandedIndex = 0;
+
   @Input() cursoId?: number | undefined; // Input para recibir el ID del curso desde el componente padre
   curso?: CursosInterfaz | undefined; // Objeto para almacenar los detalles del curso
 

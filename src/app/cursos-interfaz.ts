@@ -5,5 +5,5 @@ export interface CursosInterfaz {
     imagen: string;
     status: string;
     completado: number;
-    
+    video: string;
 }
